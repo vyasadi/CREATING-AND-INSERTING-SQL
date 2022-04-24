@@ -1,0 +1,29 @@
+/* CREATE TABLE*/
+create table cricket.employees1 (
+id int auto_increment,
+name varchar(100),
+age int,
+primary key(id));
+
+select * from cricket.employees1;
+
+
+/*INSERT ONE ROW*/
+insert into cricket.employees1(id,name,age)
+values('1','Adithya','28');
+
+/*INSERT MULTIPLE ROWS*/
+insert into cricket.employees1(id,name,age)
+values('2','Aadit','28'),('3','Ajay','28');
+
+/*INSERT ONE COLUMN VALUE*/
+insert into cricket.employees1(name)
+values('Anil');
+
+/*INSERT NEW COLUMN*/
+alter table cricket.employees1
+add city varchar(45);
+
+/*CREATE TABLE FROM ANOTHER TABLE*/
+create table cricket.employees2 as
+select * from cricket.employees1;
